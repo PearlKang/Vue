@@ -1,10 +1,13 @@
 <template>
   <section>
     <ul>
-      <!-- <li>할일 1</li>
-      <li>할일 2</li>
-      <li>할일 3</li> -->
-      <li v-for="todoItem in todoItems">{{ todoItem }}</li>
+      <li v-for="todoItem in todoItems" class="shadow">
+        <i class="checkBtn fas fa-check" aria-hidden="true"></i>
+        {{ todoItem }}
+        <span class="removeBtn" type="button" @click="removeTodo()"> <!-- @ = v-on:click -->
+          <i class="fas fa-trash-alt" aria-hidden="true"></i>
+        </span>
+      </li>
     </ul>
   </section>
 </template>
@@ -22,9 +25,42 @@ export default {
         this.todoItems.push(localStorage.key(i));
       }
     }
+  },
+  methods: {
+    removeTodo() {
+      console.log('clicked');
+    }
   }
 }
 </script>
 
-<style>
+<style scoped>
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 0;
+    text-align: left;
+  }
+
+  li {
+    display: flex;
+    min-height: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0.5rem 0;
+    padding: 0 0.9rem;
+    background: white;
+    border-radius: 5px;
+  }
+
+  .checkBtn {
+    line-height: 43px;
+    color: #62acde;
+    margin-right: 5px;
+  }
+
+  .removeBtn {
+    margin-left: auto;
+    color: #de4343;
+  }
 </style>
