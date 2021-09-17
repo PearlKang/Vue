@@ -17,11 +17,12 @@
       var sumNumbers = function(a, b) {
         return a + b;
       }
+      num = 200;
 
       new Vue({
         el: '#app',
         data: {
-          message: sumNumbers(num, 100)
+          message: sumNumbers(num, 100) + ' / ' + num
         },
       });
 
@@ -30,11 +31,12 @@
       let sumNumbers2 = (a, b) => {
         return a + b;
       }
+      //num2 = 200; //const 수정 X
 
       new Vue({
         el: '#app2',
         data: {
-          message2: sumNumbers2(num2, 100)
+          message2: sumNumbers2(num2, 100) + ' / ' + num2
         },
       });
     </script>
