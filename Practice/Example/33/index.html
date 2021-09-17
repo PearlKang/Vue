@@ -28,7 +28,7 @@
           message: sumNumbers(num, 100) + ' / ' + num
         },
       });
-
+      /////////////////////////////////////////////////////////////////
       //ES6
       const num2 = 100;
       let sumNumbers2 = (a, b) => {
@@ -42,8 +42,7 @@
           message2: sumNumbers2(num2, 100) + ' / ' + num2
         },
       });
-
-
+      /////////////////////////////////////////////////////////////////
       var i = 10;
       console.log('default i : ' + i);
       for (var i = 0; i < 5; i++) {
@@ -64,6 +63,19 @@
           message3: ''
         },
       });
+      /////////////////////////////////////////////////////////////////
+      var number= 100;
+
+      var nameSpaceA = {
+        number: 10,
+        test: 30
+      };
+      var nameSpaceB = {
+        number: 20
+      };
+      console.log('nameSpaceA number = ' + nameSpaceA.number);
+      console.log('nameSpaceA test = ' + nameSpaceA.test);
+      console.log('nameSpaceB number = ' + nameSpaceB.number);
     </script>
   </body>
 </html>
