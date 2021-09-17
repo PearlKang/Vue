@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+    <div id="app2">
+      {{ message2 }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+      //ES5
+      var num = 100;
+      var sumNumbers = function(a, b) {
+        return a + b;
+      }
+
+      new Vue({
+        el: '#app',
+        data: {
+          message: sumNumbers(num, 100)
+        },
+      });
+
+      //ES6
+      const num2 = 100;
+      let sumNumbers2 = (a, b) => {
+        return a + b;
+      }
+
+      new Vue({
+        el: '#app2',
+        data: {
+          message2: sumNumbers2(num2, 100)
+        },
+      });
+    </script>
+  </body>
+</html>
