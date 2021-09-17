@@ -9,6 +9,9 @@
     <div id="app2">
       {{ message2 }}
     </div>
+    <div id="app3">
+      {{ message3 }}
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
     <script>
@@ -37,6 +40,28 @@
         el: '#app2',
         data: {
           message2: sumNumbers2(num2, 100) + ' / ' + num2
+        },
+      });
+
+
+      var i = 10;
+      console.log('default i : ' + i);
+      for (var i = 0; i < 5; i++) {
+        console.log('for i : ' + i);
+      }
+      console.log('final i : ' + i);
+
+      let i2 = 10;
+      console.log('default i2 : ' + i2);
+      for (let i2 = 0; i2 < 5; i2++) {
+        console.log('for i2 : ' + i2);
+      }
+      console.log('final i2 : ' + i2);
+
+      new Vue({
+        el: '#app3',
+        data: {
+          message3: ''
         },
       });
     </script>
